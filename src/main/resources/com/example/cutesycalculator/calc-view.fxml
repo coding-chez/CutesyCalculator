@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="rootPane" alignment="CENTER" hgap="10" vgap="10"
+          onKeyPressed="#handleKeyPressed"
+          prefHeight="450.0" prefWidth="320.0"
+          styleClass="dark-theme" stylesheets="@styles.css"
+          xmlns="http://javafx.com/javafx/17.0.12"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.cutesycalculator.CalcController">
+
+    <padding><Insets bottom="15" left="15" right="15" top="15"/></padding>
+
+    <!-- Display -->
+    <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false"
+               prefHeight="80.0" prefWidth="290.0"
+               styleClass="display" GridPane.columnSpan="4" GridPane.rowIndex="0"/>
+
+    <!-- Row 1: Theme Toggle, Clear (C), Backspace (⌫), Divide (÷) -->
+    <ToggleButton fx:id="themeToggle" onAction="#toggleTheme"
+                  styleClass="theme-toggle" text="☀"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Button onAction="#clear" styleClass="clear-button" text="C"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Button onAction="#backspace" styleClass="clear-button" text="⌫"
+            GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <Button onAction="#processOperators" styleClass="operator-button" text="÷"
+            GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+    <!-- Row 2: Numbers 7-9, Multiply (×) -->
+    <Button onAction="#processNumbers" styleClass="number-button" text="7"
+            GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="8"
+            GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="9"
+            GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button onAction="#processOperators" styleClass="operator-button" text="×"
+            GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+    <!-- Row 3: Numbers 4-6, Subtract (-) -->
+    <Button onAction="#processNumbers" styleClass="number-button" text="4"
+            GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="5"
+            GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="6"
+            GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+    <Button onAction="#processOperators" styleClass="operator-button" text="-"
+            GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+
+    <!-- Row 4: Numbers 1-3, Addition (+) -->
+    <Button onAction="#processNumbers" styleClass="number-button" text="1"
+            GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="2"
+            GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="3"
+            GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+    <Button onAction="#processOperators" styleClass="operator-button" text="+"
+            GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+
+    <!-- Row 5: "+/-", 0, ".", Equals (=) (SAME SIZE AS OTHER BUTTONS) -->
+    <Button onAction="#toggleSign" styleClass="number-button" text="+/-"
+            GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="0"
+            GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Button onAction="#processNumbers" styleClass="number-button" text="."
+            GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+    <Button onAction="#calculate" styleClass="equals-button" text="="
+            GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+
+</GridPane>

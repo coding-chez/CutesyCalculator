@@ -1,0 +1,88 @@
+.dark-theme {
+    -fx-background-color: #2A2A3A;
+    -fx-text-fill: white;
+}
+
+.light-theme {
+    -fx-background-color: #FFF5F8;
+    -fx-text-fill: black;
+}
+
+/* 🧁 */
+.display {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-min-width: 270px;
+    -fx-min-height: 85px;
+    -fx-padding: 12px;
+    -fx-background-color: #FFEAF6;
+    -fx-text-fill: #8E44AD;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 182, 193, 0.5), 12, 0, 0, 4);
+}
+
+.dark-theme .display {
+    -fx-background-color: #3B3B4F;
+    -fx-text-fill: #FFC1E3;
+}
+
+.light-theme .display {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #FF6EB4;
+}
+
+/* 🐻 */
+.button, .toggle-button {
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-font-size: 24px;
+    -fx-background-radius: 50%;
+    -fx-font-weight: bold;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
+
+/* 🎀 */
+.dark-theme .number-button, .light-theme .number-button {
+    -fx-background-color: linear-gradient(to bottom, #FEE3EC, #F8D7FF);
+    -fx-text-fill: #A14090;
+}
+
+.dark-theme .operator-button, .light-theme .operator-button {
+    -fx-background-color: linear-gradient(to bottom, #A2D2FF, #CDB4DB);
+    -fx-text-fill: white;
+}
+
+/* 🍓 */
+.dark-theme .clear-button, .light-theme .clear-button {
+    -fx-background-color: linear-gradient(to bottom, #FF85A2, #FF5370);
+    -fx-text-fill: white;
+}
+
+/* 🌈 */
+.equals-button {
+    -fx-background-color: linear-gradient(to bottom, #FF9A8B, #FF6A88, #FF99AC);
+    -fx-text-fill: white;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-background-radius: 50%;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 144, 147, 0.8), 12, 0, 0, 4);
+}
+
+/* ☀️ */
+.theme-toggle {
+    -fx-background-color: linear-gradient(to bottom, #FFDC80, #FFF5C3);
+    -fx-text-fill: #8A2BE2;
+    -fx-background-radius: 50%;
+    -fx-font-size: 22px;
+}
+
+/* 🌸 */
+.button:hover, .toggle-button:hover {
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 200, 255, 0.5), 8, 0, 0, 4);
+}
+
+.button:pressed, .toggle-button:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 182, 193, 0.3), 4, 0, 0, 2);
+}
